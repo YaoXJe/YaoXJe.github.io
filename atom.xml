@@ -4,7 +4,7 @@
   <title><![CDATA[YaoXJe's Blog]]></title>
   <link href="http://yaoxje.github.io/atom.xml" rel="self"/>
   <link href="http://yaoxje.github.io/"/>
-  <updated>2015-08-20T14:57:59+08:00</updated>
+  <updated>2015-08-20T15:01:31+08:00</updated>
   <id>http://yaoxje.github.io/</id>
   <author>
     <name><![CDATA[YaoXJe]]></name>
@@ -25,14 +25,15 @@
 <ol>
 <li><p><strong>执行以下命令替换ruby源</strong></p>
 
-<pre><code class="` shell"> $ gem sources --remove https://rubygems.org/
- $ gem sources -a https://ruby.taobao.org/
+<p> ``shell
+ $ gem sources &ndash;remove <a href="https://rubygems.org/">https://rubygems.org/</a>
+ $ gem sources -a <a href="https://ruby.taobao.org/">https://ruby.taobao.org/</a>
  $ gem sources -l
- *** CURRENT SOURCES ***
+ <strong><em> CURRENT SOURCES </em></strong></p>
 
- https://ruby.taobao.org
+<p> <a href="https://ruby.taobao.org">https://ruby.taobao.org</a>
      # 请确保只有 ruby.taobao.org
-</code></pre></li>
+ ```</p></li>
 <li><p><strong>执行以下命令修改Gemfile文件</strong></p>
 
 <p> <code>$ vi Gemfile</code>然后将第一行的<br/>
@@ -48,9 +49,11 @@
 <ol>
 <li><p><strong>更新静态网页并上传</strong></p>
 
-<pre><code class="` shell"> $ rake generate
- $ rake deploy
-</code></pre></li>
+<p> ``shell
+ $ rake generate
+ $ rake deploy</p>
+
+<p> ```</p></li>
 <li><p><strong>上传源文件</strong></p>
 
 <pre><code>$ git add .
@@ -68,13 +71,15 @@ $ git push origin source
 <ol>
 <li><p>首先将博客的源文件clone到本地的octopress文件夹内</p>
 
-<pre><code class="` shell">  $ git clone -b source git@github.com:username/username.github.com.git octopress
-</code></pre></li>
+<p> ``shell
+  $ git clone -b source git@github.com:username/username.github.com.git octopress
+  ```</p></li>
 <li><p>将博客文件clone到octopress的_deploy文件夹内</p>
 
-<pre><code class="` shell">  $ cd octopress  
+<p> ``shell
+  $ cd octopress<br/>
   $ git clone git@github.com:username/username.github.com.git _deploy
-</code></pre></li>
+  ```</p></li>
 </ol>
 </li>
 <li><strong>如果是重新在一台全新的电脑上要和服务器上的进行同步</strong>
@@ -83,11 +88,12 @@ $ git push origin source
 <li>执行以上2步</li>
 <li><p>重新<em>install bundle</em></p>
 
-<pre><code class="` shell">  cd octopress  
-  ruby --version # Should report Ruby 1.9.2  
-  gem install bundler  
+<p> ``shell
+  cd octopress<br/>
+  ruby &ndash;version # Should report Ruby 1.9.2<br/>
+  gem install bundler<br/>
   bundle install
-</code></pre></li>
+  ```</p></li>
 </ol>
 </li>
 <li><strong>如果几台电脑上面都配置好了Otcopress，要在其中一台上写博客</strong>
@@ -95,11 +101,12 @@ $ git push origin source
 <ol>
 <li><p>更新<em>source</em>仓库</p>
 
-<pre><code class="` shell">  $ cd octopress  
-  $ git pull origin source  # update the local source branch  
-  $ cd ./_deploy  
-  $ git pull origin master  # update the local master branch  
-</code></pre></li>
+<p> ``shell
+  $ cd octopress<br/>
+  $ git pull origin source  # update the local source branch<br/>
+  $ cd ./_deploy<br/>
+  $ git pull origin master  # update the local master branch<br/>
+  ```</p></li>
 <li>按<em>上传顺序</em>执行</li>
 </ol>
 </li>
