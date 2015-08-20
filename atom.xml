@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[YaoXJe's Blog]]></title>
+  <link href="http://yaoxje.github.io/atom.xml" rel="self"/>
+  <link href="http://yaoxje.github.io/"/>
+  <updated>2015-08-20T14:47:37+08:00</updated>
+  <id>http://yaoxje.github.io/</id>
+  <author>
+    <name><![CDATA[YaoXJe]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Octopress使用记录]]></title>
+    <link href="http://yaoxje.github.io/blog/2015/08/20/octopressshi-yong-ji-lu/"/>
+    <updated>2015-08-20T14:43:50+08:00</updated>
+    <id>http://yaoxje.github.io/blog/2015/08/20/octopressshi-yong-ji-lu</id>
+    <content type="html"><![CDATA[<h1>Octopress注意事项</h1>
+
+<h2><em>rubyGems</em>配置</h2>
+
+<ol>
+<li><p><strong>执行以下命令替换ruby源</strong></p>
+
+<pre><code class="`"> $ gem sources --remove https://rubygems.org/
+ $ gem sources -a https://ruby.taobao.org/
+ $ gem sources -l
+ *** CURRENT SOURCES ***
+
+ https://ruby.taobao.org
+     # 请确保只有 ruby.taobao.org
+</code></pre></li>
+<li><p><strong>执行以下命令修改Gemfile文件</strong></p>
+
+<p> <code>$ vi Gemfile</code>然后将第一行的<br/>
+ <code>source 'https://rubygems.org/'</code><br/>
+ 改成<br/>
+ <code>source 'https://rubygems.org/'</code><br/>
+ <code>:wq</code>保存并退出Vim</p></li>
+</ol>
+
+
+<h2>上传顺序</h2>
+
+<ol>
+<li><p><strong>更新静态网页并上传</strong></p>
+
+<pre><code class="`"> $ rake generate
+ $ rake deploy
+</code></pre></li>
+<li><p><strong>上传源文件</strong></p>
+
+<pre><code>$ git add .
+$ git commit -m 'your message'
+$ git push origin source
+</code></pre></li>
+</ol>
+
+
+<h2>多终端合作时</h2>
+
+<ul>
+<li><strong>如果本地已经配置过octopress，只是把octopress删掉重装</strong>
+
+<ol>
+<li><p>首先将博客的源文件clone到本地的octopress文件夹内</p>
+
+<pre><code class="`">  $ git clone -b source git@github.com:username/username.github.com.git octopress
+</code></pre></li>
+<li><p>将博客文件clone到octopress的_deploy文件夹内</p>
+
+<pre><code class="`">  $ cd octopress  
+  $ git clone git@github.com:username/username.github.com.git _deploy
+</code></pre></li>
+</ol>
+</li>
+<li><strong>如果是重新在一台全新的电脑上要和服务器上的进行同步</strong>
+
+<ol>
+<li>执行以上2步</li>
+<li><p>重新<em>install bundle</em></p>
+
+<pre><code class="`">  cd octopress  
+  ruby --version # Should report Ruby 1.9.2  
+  gem install bundler  
+  bundle install
+</code></pre></li>
+</ol>
+</li>
+<li><strong>如果几台电脑上面都配置好了Otcopress，要在其中一台上写博客</strong>
+
+<ol>
+<li><p>更新<em>source</em>仓库</p>
+
+<pre><code class="`">  $ cd octopress  
+  $ git pull origin source  # update the local source branch  
+  $ cd ./_deploy  
+  $ git pull origin master  # update the local master branch  
+</code></pre></li>
+<li>按<em>上传顺序</em>执行</li>
+</ol>
+</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>
