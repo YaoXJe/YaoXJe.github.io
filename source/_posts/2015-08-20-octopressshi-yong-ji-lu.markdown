@@ -6,7 +6,6 @@ comments: true
 categories: 
 ---
 
-#Octopress注意事项
 ##*rubyGems*配置
 1. **执行以下命令替换ruby源**
 
