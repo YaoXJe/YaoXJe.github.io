@@ -4,7 +4,7 @@
   <title><![CDATA[YaoXJe's Blog]]></title>
   <link href="http://yaoxje.github.io/atom.xml" rel="self"/>
   <link href="http://yaoxje.github.io/"/>
-  <updated>2015-08-20T15:11:12+08:00</updated>
+  <updated>2015-08-20T15:18:05+08:00</updated>
   <id>http://yaoxje.github.io/</id>
   <author>
     <name><![CDATA[YaoXJe]]></name>
@@ -18,9 +18,7 @@
     <link href="http://yaoxje.github.io/blog/2015/08/20/octopressshi-yong-ji-lu/"/>
     <updated>2015-08-20T14:43:50+08:00</updated>
     <id>http://yaoxje.github.io/blog/2015/08/20/octopressshi-yong-ji-lu</id>
-    <content type="html"><![CDATA[<h1>Octopress注意事项</h1>
-
-<h2><em>rubyGems</em>配置</h2>
+    <content type="html"><![CDATA[<h2><em>rubyGems</em>配置</h2>
 
 <ol>
 <li><p><strong>执行以下命令替换ruby源</strong></p>
